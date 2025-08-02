@@ -3,7 +3,7 @@ import Image from "next/image";
 import Card from "./card";
 
 export default async function Wind({ lat, lon }) {
-  const { speed, deg } = await getWindData(lat, lon);
+  const wind = await getWindData(lat, lon);
 
   return (
     <Card>
@@ -18,8 +18,8 @@ export default async function Wind({ lat, lon }) {
               height={80}
               width={80}
             />
-            <h3 className="feature-title">{speed} meter/sec</h3>
-            <span className="feature-name">{deg} degrees</span>
+            <h3 className="feature-title">{wind?.speed || 0} meter/sec</h3>
+            <span className="feature-name">{wind?.deg} degrees</span>
           </div>
         </div>
       </div>
