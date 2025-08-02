@@ -3,7 +3,7 @@ import Image from "next/image";
 import Card from "./card";
 
 export default async function AQI({ lat, lon }) {
-  const { main, components } = await getAQIData(lat, lon);
+  const aqiData = await getAQIData(lat, lon);
   function getAQIRating(aqi) {
     switch (aqi) {
       case 1:
@@ -35,7 +35,7 @@ export default async function AQI({ lat, lon }) {
           Air Quality Index
         </div>
         <span className="text-right text-sm text-white lg:text-base">
-          {getAQIRating(main.aqi)}
+          {getAQIRating(aqiData?.main?.aqi)}
         </span>
       </div>
       <div className="flex items-center justify-between gap-4">
@@ -50,7 +50,7 @@ export default async function AQI({ lat, lon }) {
           Carbon monoxide
         </div>
         <span className="text-right text-sm text-white lg:text-base">
-          {components?.co} μg/m3
+          {aqiData?.components?.co} μg/m3
         </span>
       </div>
       <div className="flex items-center justify-between gap-4">
@@ -65,7 +65,7 @@ export default async function AQI({ lat, lon }) {
           Nitrogen monoxide
         </div>
         <span className="text-right text-sm text-white lg:text-base">
-          {components?.no} μg/m3
+          {aqiData?.components?.no} μg/m3
         </span>
       </div>
       <div className="flex items-center justify-between gap-4">
@@ -80,7 +80,7 @@ export default async function AQI({ lat, lon }) {
           Nitrogen dioxide
         </div>
         <span className="text-right text-sm text-white lg:text-base">
-          {components?.no2} μg/m3
+          {aqiData?.components?.no2} μg/m3
         </span>
       </div>
       <div className="flex items-center justify-between gap-4">
@@ -95,7 +95,7 @@ export default async function AQI({ lat, lon }) {
           Ozone
         </div>
         <span className="text-right text-sm text-white lg:text-base">
-          {components?.o3} μg/m3
+          {aqiData?.components?.o3} μg/m3
         </span>
       </div>
       <div className="flex items-center justify-between gap-4">
@@ -110,7 +110,7 @@ export default async function AQI({ lat, lon }) {
           Sulphur dioxide
         </div>
         <span className="text-right text-sm text-white lg:text-base">
-          {components?.so2} μg/m3
+          {aqiData?.components?.so2} μg/m3
         </span>
       </div>
       <div className="flex items-center justify-between gap-4">
@@ -125,7 +125,7 @@ export default async function AQI({ lat, lon }) {
           Fine particles matter
         </div>
         <span className="text-right text-sm text-white lg:text-base">
-          {components?.pm2_5} μg/m3
+          {aqiData?.components?.pm2_5} μg/m3
         </span>
       </div>
       <div className="flex items-center justify-between gap-4">
@@ -140,7 +140,7 @@ export default async function AQI({ lat, lon }) {
           Coarse particulate matter
         </div>
         <span className="text-right text-sm text-white lg:text-base">
-          {components?.pm10} μg/m3
+          {aqiData?.components?.pm10} μg/m3
         </span>
       </div>
       <div className="flex items-center justify-between gap-4">
@@ -155,7 +155,7 @@ export default async function AQI({ lat, lon }) {
           Ammonia
         </div>
         <span className="text-right text-sm text-white lg:text-base">
-          {components?.nh3} μg/m3
+          {aqiData?.components?.nh3} μg/m3
         </span>
       </div>
     </Card>

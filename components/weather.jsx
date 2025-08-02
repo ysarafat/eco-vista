@@ -3,7 +3,7 @@ import Image from "next/image";
 import Card from "./card";
 
 export default async function Weather({ lat, lon }) {
-  const { main, description } = await getWeatherData(lat, lon);
+  const weather = await getWeatherData(lat, lon);
   return (
     <Card>
       {" "}
@@ -18,8 +18,8 @@ export default async function Weather({ lat, lon }) {
               width={80}
               height={80}
             />
-            <h3 className="feature-title">{main}</h3>
-            <span className="feature-name ">{description}</span>
+            <h3 className="feature-title">{weather?.main}</h3>
+            <span className="feature-name ">{weather?.description}</span>
           </div>
         </div>
       </div>
