@@ -22,11 +22,11 @@ export default async function AQI({ lat, lon }) {
   }
   return (
     <Card>
-      <h6 class="feature-name">Air Pollution & Quality</h6>
-      <div class="flex items-center justify-between gap-4">
-        <div class="flex items-center gap-2 text-sm text-[#CADEE8] lg:text-base">
+      <h6 className="feature-name">Air Pollution & Quality</h6>
+      <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center gap-2 text-sm text-[#CADEE8] lg:text-base">
           <Image
-            class="max-w-[18px]"
+            className="max-w-[18px]"
             src="/icon_air_element.png"
             alt="icon"
             width={18}
@@ -34,14 +34,14 @@ export default async function AQI({ lat, lon }) {
           />
           Air Quality Index
         </div>
-        <span class="text-right text-sm text-white lg:text-base">
+        <span className="text-right text-sm text-white lg:text-base">
           {getAQIRating(main.aqi)}
         </span>
       </div>
-      <div class="flex items-center justify-between gap-4">
-        <div class="flex items-center gap-2 text-sm text-[#CADEE8] lg:text-base">
+      <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center gap-2 text-sm text-[#CADEE8] lg:text-base">
           <Image
-            class="max-w-[18px]"
+            className="max-w-[18px]"
             src="/icon_air_element.png"
             alt="icon"
             width={18}
@@ -49,14 +49,14 @@ export default async function AQI({ lat, lon }) {
           />
           Carbon monoxide
         </div>
-        <span class="text-right text-sm text-white lg:text-base">
+        <span className="text-right text-sm text-white lg:text-base">
           {components?.co} μg/m3
         </span>
       </div>
-      <div class="flex items-center justify-between gap-4">
-        <div class="flex items-center gap-2 text-sm text-[#CADEE8] lg:text-base">
+      <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center gap-2 text-sm text-[#CADEE8] lg:text-base">
           <Image
-            class="max-w-[18px]"
+            className="max-w-[18px]"
             src="/icon_air_element.png"
             alt="icon"
             width={18}
@@ -64,14 +64,14 @@ export default async function AQI({ lat, lon }) {
           />
           Nitrogen monoxide
         </div>
-        <span class="text-right text-sm text-white lg:text-base">
+        <span className="text-right text-sm text-white lg:text-base">
           {components?.no} μg/m3
         </span>
       </div>
-      <div class="flex items-center justify-between gap-4">
-        <div class="flex items-center gap-2 text-sm text-[#CADEE8] lg:text-base">
+      <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center gap-2 text-sm text-[#CADEE8] lg:text-base">
           <Image
-            class="max-w-[18px]"
+            className="max-w-[18px]"
             src="/icon_air_element.png"
             alt="icon"
             width={18}
@@ -79,14 +79,14 @@ export default async function AQI({ lat, lon }) {
           />
           Nitrogen dioxide
         </div>
-        <span class="text-right text-sm text-white lg:text-base">
+        <span className="text-right text-sm text-white lg:text-base">
           {components?.no2} μg/m3
         </span>
       </div>
-      <div class="flex items-center justify-between gap-4">
-        <div class="flex items-center gap-2 text-sm text-[#CADEE8] lg:text-base">
+      <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center gap-2 text-sm text-[#CADEE8] lg:text-base">
           <Image
-            class="max-w-[18px]"
+            className="max-w-[18px]"
             src="/icon_air_element.png"
             alt="icon"
             width={18}
@@ -94,14 +94,14 @@ export default async function AQI({ lat, lon }) {
           />
           Ozone
         </div>
-        <span class="text-right text-sm text-white lg:text-base">
+        <span className="text-right text-sm text-white lg:text-base">
           {components?.o3} μg/m3
         </span>
       </div>
-      <div class="flex items-center justify-between gap-4">
-        <div class="flex items-center gap-2 text-sm text-[#CADEE8] lg:text-base">
+      <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center gap-2 text-sm text-[#CADEE8] lg:text-base">
           <Image
-            class="max-w-[18px]"
+            className="max-w-[18px]"
             src="/icon_air_element.png"
             alt="icon"
             width={18}
@@ -109,14 +109,14 @@ export default async function AQI({ lat, lon }) {
           />
           Sulphur dioxide
         </div>
-        <span class="text-right text-sm text-white lg:text-base">
+        <span className="text-right text-sm text-white lg:text-base">
           {components?.so2} μg/m3
         </span>
       </div>
-      <div class="flex items-center justify-between gap-4">
-        <div class="flex items-center gap-2 text-sm text-[#CADEE8] lg:text-base">
+      <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center gap-2 text-sm text-[#CADEE8] lg:text-base">
           <Image
-            class="max-w-[18px]"
+            className="max-w-[18px]"
             src="/icon_air_element.png"
             alt="icon"
             width={18}
@@ -124,14 +124,14 @@ export default async function AQI({ lat, lon }) {
           />
           Fine particles matter
         </div>
-        <span class="text-right text-sm text-white lg:text-base">
+        <span className="text-right text-sm text-white lg:text-base">
           {components?.pm2_5} μg/m3
         </span>
       </div>
-      <div class="flex items-center justify-between gap-4">
-        <div class="flex items-center gap-2 text-sm text-[#CADEE8] lg:text-base">
+      <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center gap-2 text-sm text-[#CADEE8] lg:text-base">
           <Image
-            class="max-w-[18px]"
+            className="max-w-[18px]"
             src="/icon_air_element.png"
             alt="icon"
             width={18}
@@ -139,14 +139,14 @@ export default async function AQI({ lat, lon }) {
           />
           Coarse particulate matter
         </div>
-        <span class="text-right text-sm text-white lg:text-base">
+        <span className="text-right text-sm text-white lg:text-base">
           {components?.pm10} μg/m3
         </span>
       </div>
-      <div class="flex items-center justify-between gap-4">
-        <div class="flex items-center gap-2 text-sm text-[#CADEE8] lg:text-base">
+      <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center gap-2 text-sm text-[#CADEE8] lg:text-base">
           <Image
-            class="max-w-[18px]"
+            className="max-w-[18px]"
             src="/icon_air_element.png"
             alt="icon"
             width={18}
@@ -154,7 +154,7 @@ export default async function AQI({ lat, lon }) {
           />
           Ammonia
         </div>
-        <span class="text-right text-sm text-white lg:text-base">
+        <span className="text-right text-sm text-white lg:text-base">
           {components?.nh3} μg/m3
         </span>
       </div>

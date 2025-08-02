@@ -7,19 +7,19 @@ export default async function Weather({ lat, lon }) {
   return (
     <Card>
       {" "}
-      <div class="col-span-12 lg:col-span-4 2xl:col-span-3">
-        <div class="card">
-          <h6 class="feature-name">Current Weather</h6>
-          <div class="feature-main">
+      <div className="col-span-12 lg:col-span-4 2xl:col-span-3">
+        <div className="card">
+          <h6 className="feature-name">Current Weather</h6>
+          <div className="feature-main">
             <Image
-              class="max-w-20"
+              className="max-w-20"
               src="/icon_rain.png"
               alt="rain icon"
               width={80}
               height={80}
             />
-            <h3 class="feature-title">{main}</h3>
-            <span class="feature-name ">{description}</span>
+            <h3 className="feature-title">{main}</h3>
+            <span className="feature-name ">{description}</span>
           </div>
         </div>
       </div>
